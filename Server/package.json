@@ -1,0 +1,42 @@
+{
+  "name": "absence-project",
+  "version": "1.0.0",
+  "description": "Mini Project for Web Class",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/Server",
+    "dev": "call .bat && nodemon --exec babel-node src/Server",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
+    "prod": "npm-run-all clean build start"
+  },
+  "author": "AFASSY",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^16.1.8",
+    "await-to-js": "^2.1.1",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-request-id": "^1.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.13",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "npm-run-all": "^4.1.5",
+    "oracledb": "^4.0.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "debug": "^4.1.1",
+    "rimraf": "^3.0.0"
+  }
+}

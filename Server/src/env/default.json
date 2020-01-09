@@ -1,0 +1,10 @@
+{
+    "dbConfig": {
+        "DB_User": "",
+        "DB_Password": "",
+        "DB_Connection": ""
+    },
+    "LoginConfig":{
+        "JWT_Private_Key": ""
+    }
+}

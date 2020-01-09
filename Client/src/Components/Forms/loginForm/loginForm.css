@@ -1,0 +1,138 @@
+* {
+  font-family: "montserrat", sans-serif;
+}
+
+.login-box {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg, #9fbaa8, #31354c);
+  transition: 1s;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.login-form h1 {
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.txtb {
+  display: block;
+  box-sizing: border-box;
+  width: 240px;
+  background: #ffffff28;
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: white;
+  outline: none;
+  margin: 10px 0;
+  border-radius: 6px;
+  text-align: center;
+
+}
+
+.login-btn {
+  width: 240px;
+  background: #2c3e50;
+  border: 0;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hide-login-btn {
+  color: #000;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+  font-size: 24px;
+  opacity: .7;
+}
+
+.show-login-btn {
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  color: white;
+  border: 2px solid;
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.show-login-sign {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.show-login-btn.student {
+  left: 45%;
+}
+
+.show-login-btn.professor {
+  left: 55%;
+}
+
+.showed {
+  left: 0;
+}
+
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  font-family: 'Varela Round';
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  border: 0;
+}
+
+.btn-primary {
+  background-color: #64a19d;
+}
+
+.btn-primary:hover {
+  background-color: #4f837f;
+}
+
+.btn-primary:focus {
+  background-color: #4f837f;
+  color: white;
+}
+
+.btn-primary:active {
+  background-color: #467370 !important;
+}
+
+/*reset password span*/
+.pass-reco {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+input[type=email] {
+  margin-left: 17px;
+}
+
+.recp-group>button {
+  margin-top: 11px;
+
+}

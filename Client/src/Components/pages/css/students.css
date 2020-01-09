@@ -1,0 +1,117 @@
+ .table {
+     /* border: 1px solid; */
+     margin-top: 43px;
+     width: 100%;
+     line-height: 2.5;
+     margin-left: -24px;
+ }
+
+ table td,
+ table th {
+     font-size: 10px !important;
+     padding: 6px !important;
+ }
+
+ table.table th,
+ table.table td {
+     padding-top: 4px !important;
+     padding-bottom: 3px !important;
+ }
+
+ tr {
+     white-space: nowrap;
+ }
+
+ tbody {
+     text-align: start;
+ }
+
+ thead {
+     border-bottom: 1px solid #EDEDED;
+     border-top: 1px solid #EDEDED;
+     border-width: 3px;
+ }
+
+ th {
+     padding: 6px !important;
+ }
+
+ .mini-nav {
+     font-size: 10px;
+     margin-left: -16px;
+ }
+
+ .input-text {
+     width: 112px;
+     font-size: 9px;
+     height: 21px;
+     border-radius: 16px;
+     border-style: none;
+     text-align: center;
+     background-color: #E4E5E7;
+ }
+
+ .tab-header {
+     width: 61.4em;
+     position: absolute;
+     margin-top: -38px;
+     background-color: #ffffff;
+     text-align: end;
+
+ }
+
+ #search-btn {
+     padding: 0px;
+     margin: 0px;
+     height: 20px;
+     width: 64px;
+     font-size: 9px;
+     border-radius: 38px;
+     margin-right: 94px;
+     /* padding-left: 3px; */
+     margin-left: 8px;
+ }
+
+ #search-input {
+     margin-right: 11px;
+ }
+
+ .tab-header-title {
+     float: left;
+     font-size: 13px;
+     margin-left: 14px;
+     margin-top: 6px;
+     font-weight: 700;
+ }
+
+ /*set tr color to white*/
+ .first-col {
+     background-color: #ffffff;
+ }
+
+ .seconde-col {
+     background-color: #F8F8F8;
+ }
+
+ /*styling the check box*/
+ input[type=checkbox] {
+     background-color: red;
+ }
+
+ /*action icons styling*/
+ .fa-trash-alt {
+     color: #F76262;
+ }
+
+ .fa-edit {
+     color: #66AE69
+ }
+
+ .fa-eye {
+     color: #969696;
+ }
+
+ .fas {
+     cursor: pointer;
+     padding-left: 5px;
+ }

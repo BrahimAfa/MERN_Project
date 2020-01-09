@@ -1,0 +1,69 @@
+.main{
+    background-color: #ffffff;
+    position: absolute;
+    margin-left: 12em;
+    margin-top: -59em;
+    width: 83%;
+}
+.main > h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+ select  {
+    width: 16em;
+    height: 1.7em;
+    margin-left: 5px;
+    background-color: #F1F2F4;
+    border-style: none;
+    color: #AAAAAA;
+}
+.btn{
+    width: 92px;
+    font-size: 14px;
+    height: 34px;
+    margin: 23px 34px 21px 16px;
+    padding: 0px;
+    text-transform: none;
+}
+
+.select-group{
+    margin-left: 11px;
+    margin-right: 14px;
+    display: flex;
+    font-size: 14px;
+}
+
+.sel{
+    border-radius: 2px;
+    -webkit-appearance: checkbox;
+}
+label{
+    font-weight: 400;
+    font-size: 13px;
+}
+.line-break{
+    border: 1px solid #F1F2F4;
+    margin-bottom: 14px;
+}
+
+.head{
+    padding: 11px;
+}
+
+option[selected="selected"]{
+    font-size: 10px;
+    }
+
+.nav-pwd{
+    position: absolute;
+    margin-left: 15em;
+    margin-top: -75em;
+    font-size: 13px;
+}
+.col-names{
+width: 10em;
+}
+.col-days{
+    width: 4em;
+}

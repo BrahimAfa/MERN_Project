@@ -1,0 +1,12 @@
+node_modules/
+/src/logs/
+#for vscode Folder
+.vscode/
+#for shell used to export enviroment Variables
+.bashrc
+.bat
+.env
+dist/
+Uploads/
+#src/logs/morgan-logs.log
+src/logs/
