@@ -1,0 +1,16 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "simple TP",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd Server && npm run dev",
+    "client": "cd Client && npm start",
+    "start": "concurrently --kill-others \"npm run server\" \"npm run client\""
+  },
+  "author": "Brahim && Hicham",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.0.2"
+  }
+}
