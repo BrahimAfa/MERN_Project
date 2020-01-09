@@ -3,10 +3,14 @@ import NavBar from '../wedgets/navbar';
 import Header from '../wedgets/Header';
 import './css/students.css'
 import Data from './Data.json';
+import Axios from 'axios';
 
 
 export default class students extends Component {
     state = {
+        loadingMsg: "Loading...!!",
+        Students: [],
+        loading: true,
         photo: [],
         name: [],
         gender: [],
@@ -20,29 +24,41 @@ export default class students extends Component {
     }
 
     //get data and send 24 a limite of rows/items
-    componentDidMount(){
-        
+    async componentDidMount() {
+        try {
+            const result = await Axios.get("http://localhost:3030/api/student", {
+                headers: { "Authorization": localStorage.getItem("token") }
+            });
+            this.setState({ Students: result.data, loading: false });
+        } catch (err) {
+            console.log(err);
+            console.log(err.response.data);
+            this.setState({ loadingMsg: err.response.data })
+
+        }
+
     }
     studentsList = () => {
-        const students = Data.splice(0, 24).map((item, key) => {
-            console.log(key)
+        let key = 0
+        const students = this.state.Students.splice(0, 24).map((item) => {
+            key++;
             return (
-                <tr key={key} className={key % 2 == 0 ? "first-col" : "seconde-col"}>
-                    <th scope="row"><input type="checkbox" name="check-all" id="all" /> #{item.id}</th>
+                <tr key={key} data-key={item._id} className={key % 2 == 0 ? "first-col" : "seconde-col"}>
+                    <th scope="row"><input type="checkbox" name="check-all" id="all" /> #{key}</th>
                     <td>pic</td>
-                    <td>{item.name}</td>
+                    <td>{`${item.firstName} ${item.lastName}`}</td>
                     <td>{item.gender}</td>
-                    <td>{item.parents}</td>
-                    <td>{item.class}</td>
-                    <td>{item.section}</td>
-                    <td>{item.Address}</td>
-                    <td>{item.date_birth}</td>
-                    <td>{item.mobile}</td>
+                    <td>{item.CNE}</td>
+                    <td>{item.CNI}</td>
+                    <td>{item.group.code}</td>
+                    <td>{new Date(item.birthdate).toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</td>
+                    <td>{item.tele}</td>
                     <td>{item.email}</td>
+                    <td>{item.absenceAVG}</td>
                     <td>
                         <i class="fas fa-eye" onClick={() => { }} data-toggle="modal" data-target="#exampleModal"></i>
                         <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-trash-alt" data-toggle="modal" data-target="#MdalDel"></i>
                     </td>
                 </tr>
             )
@@ -65,21 +81,41 @@ export default class students extends Component {
                             <th scope="col">Photo</th>
                             <th scope="col">Name</th>
                             <th scope="col">Gender</th>
-                            <th scope="col">Parents Name</th>
-                            <th scope="col">Class</th>
-                            <th scope="col">Section</th>
-                            <th scope="col">Address</th>
+                            <th scope="col">CNE</th>
+                            <th scope="col">CNI</th>
+                            <th scope="col">Group</th>
                             <th scope="col">Date Of Birth</th>
                             <th scope="col">Mobile No</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col">Absence</th>
                         </tr>
                     </thead>
                     <tbody>
                         {students}
                     </tbody>
                 </table>
-                {/* Modale  */}
+                {/* Modale Show Data */}
+
+                <div class="modal fade" id="MdalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h3>Confirm Delete...</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* Modal delete */}
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -132,7 +168,7 @@ export default class students extends Component {
                     <div class="col-sm-10">
                         <Header />
                         <span className="mini-nav">Home-Attendance</span>
-                        {this.studentsList()}
+                        {this.state.loading ? <h3>{this.state.loadingMsg}</h3> : this.studentsList()}
                     </div>
                 </div>
             </div>
