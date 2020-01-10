@@ -8,7 +8,6 @@ import Upload from '../models/Uploads.module';
 import Student from '../models/Student.module';
 import Professor from '../models/Professor.module';
 
-
 upload.route('/student').post(passportAuth, multerUpload.single("fileUpload"), async (req, res) => {
 
         const { name, description } = req.body;

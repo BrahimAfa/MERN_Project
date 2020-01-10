@@ -23,6 +23,7 @@ import passport from "passport";
 import { UserStrategy } from "./Config/auth.config";
 import { makeDir } from './utils/helper'
 import Upload from "./routes/uploads";
+import cors from 'cors'
 const app = express();
 //WinstonLogger();
 //make uploads Dirictory
@@ -35,8 +36,8 @@ app.use(passport.initialize())
 app.use(morganMiddleware);
 app.use(addRequestId());
 
-app.use(express.json());
-
+app.use(express.json())
+app.use(cors())
 app.use('/api/group', group);
 app.use('/api/upload', Upload);
 app.use('/api/professor', professor);

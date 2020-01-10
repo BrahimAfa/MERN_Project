@@ -67,13 +67,13 @@ class LoginForm extends Component {
                     errMessage: result.data.message
                 });
             } catch (err) {
-                console.log("err", err.response);
-                if (err.response.status <= 400) {
-                    this.setState({
-                        displayErr: 'block',
-                        errMessage: err.response.data.message
-                    });
-                }
+                console.log("err", err);
+                // if (err.response.status <= 400) {
+                // this.setState({
+                //     displayErr: 'block',
+                //     errMessage: err.response.data.message
+                // });
+                // }
 
             }
 

@@ -47,6 +47,7 @@ const studentSchema = new mongoose.Schema({
     },
     absenceAVG: {
         type: Number,
+        default: 0
     },
     tele: {
         type: String,
@@ -74,7 +75,7 @@ const studentSchema = new mongoose.Schema({
 });
 
 export function validateStudent(data) {
-    const schema = Joi.object().keys({
+    const schema = Joi.object({
         CNE: Joi.string()
             .alphanum()
             .min(5)
@@ -115,8 +116,7 @@ export function validateStudent(data) {
             .required(),
         tele: Joi.string()
             .max(10)
-            .trim()
-            .required(),
+            .trim(),
         absenceAVG: Joi.number(),
         group: ValidateGroupSchema
     });

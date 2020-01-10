@@ -20,11 +20,11 @@ student.route('/:id').get(passportAuth, async (req, res) => {
 
 });
 
-student.route('/').post(passportAuth,IsAdmin,async (req, res) => {
+student.route('/').post(passportAuth, async (req, res) => {
     // { firstName, lastName, Matricul, email, birthdate, group, password }
     debuger("hello from post ^^");
     const { error } = validateStudent(req.body);
-    if (error) return res.status(400).json({ ok: 0, error: error.details[0].message });
+    if (error) return res.status(400).json({ ok: 0, message: error.details[0].message });
     // debuger("value hello");
     const { password } = req.body;
     req.body.password = await HashPassword(password);

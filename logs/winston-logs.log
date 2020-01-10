@@ -1,0 +1,44 @@
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { SyntaxError: Unexpected string in JSON at position 324
+          at JSON.parse (<anonymous>)
+          at parse (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\body-parser\lib\types\json.js:89:19)
+          at C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\body-parser\lib\read.js:121:18
+          at invokeCallback (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\raw-body\index.js:224:16)
+          at done (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\raw-body\index.js:213:7)
+          at IncomingMessage.onEnd (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\raw-body\index.js:273:7)
+          at IncomingMessage.emit (events.js:203:15)
+          at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+          at endReadableNT (_stream_readable.js:1145:12)
+          at process._tickCallback (internal/process/next_tick.js:63:19)
+        expose: true,
+        statusCode: 400,
+        status: 400,
+        body:
+         '\r\n    {\r\n        "firstName": "Brahim",\r\n        "lastName": "Afassy",\r\n        "email": "s@s.com",\r\n        "CNE": "JC563288",\r\n        "tele": "088763652",\r\n        "gender": "Male",\r\n        "CNI": "D1325152",\r\n        "birthdate": "1999-02-14T00:00:00.000Z",\r\n        "group": {\r\n            "code": "ISIL"\r\n            "name":"I...S...I...L..."\r\n        },\r\n        "password": "123ABCabc",\r\n        "__v": 0,\r\n        "absenceAVG": 10\r\n    }',
+        type: 'entity.parse.failed' } },
+  level: 'error',
+  timestamp: '2020-01-09 12:27:20' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoError: E11000 duplicate key error collection: EU.students index: email_1 dup key: { email: "s@s.com" }
+          at Function.create (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\mongodb\lib\core\error.js:44:12)
+          at toError (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\mongodb\lib\utils.js:150:22)
+          at coll.s.topology.insert (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\mongodb\lib\operations\common_functions.js:266:39)
+          at handler (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\mongodb\lib\core\sdam\topology.js:971:24)
+          at wireProtocol.(anonymous function) (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\mongodb\lib\core\sdam\server.js:496:5)
+          at C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\mongodb\lib\core\connection\pool.js:414:18
+          at process._tickCallback (internal/process/next_tick.js:61:11)
+        driver: true,
+        name: 'MongoError',
+        index: 0,
+        code: 11000,
+        keyPattern: { email: 1 },
+        keyValue: { email: 's@s.com' },
+        errmsg:
+         'E11000 duplicate key error collection: EU.students index: email_1 dup key: { email: "s@s.com" }',
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-09 12:28:47' }

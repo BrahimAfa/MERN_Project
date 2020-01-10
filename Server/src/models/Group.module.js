@@ -23,8 +23,8 @@ export const groupSchema = new mongoose.Schema({
 
 export const ValidateGroupSchema = Joi.object({
     code: Joi.string().min(2).max(8).trim().required(),
-    name: Joi.string().min(3).max(50).trim().required(),
-    modules: Joi.array().items(ValidateModuleSchema).required()
+    name: Joi.string().min(3).max(50).trim(),
+    modules: Joi.array().items(ValidateModuleSchema)
 });
 
 export function ValidateGroup(data) {
