@@ -12,8 +12,7 @@ import express from "express";
 //const dbConfig = require('./config/database.js');
 import { Startup } from './Config/Server.Config';
 import group from './routes/Group';
-import Student from './routes/Student';
-import professor from './routes/professor';
+import User from './routes/User';
 import { morganMiddleware } from './Config/morgan.Config';
 //Request log and its associated Response log would have the same id
 import addRequestId from 'express-request-id';
@@ -27,7 +26,7 @@ import cors from 'cors'
 const app = express();
 //WinstonLogger();
 //make uploads Dirictory
-makeDir(__dirname, "/Uploads/Students");
+makeDir(__dirname, "/Uploads/Users");
 makeDir(__dirname, "/Uploads/Professor");
 console.log(__filename);
 
@@ -40,8 +39,7 @@ app.use(express.json())
 app.use(cors())
 app.use('/api/group', group);
 app.use('/api/upload', Upload);
-app.use('/api/professor', professor);
-app.use('/api/student', Student);
+app.use('/api/user', User);
 app.use('/api/login', login);
 
 app.use(errorHandling);

@@ -2,8 +2,19 @@ import mongoose from 'mongoose';
 import { groupSchema, ValidateGroupSchema } from './Group.module';
 import Joi from '@hapi/joi';
 
-const studentSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
 
+    role: {
+        type: String,
+        required: true,
+        min: '3',
+        max: '20',
+        trim: true
+    },
+    pictur: {
+        type: String,
+        default: "http://www.ietpune.com/img/teacher-img/user.png",
+    },
     firstName: {
         type: String,
         required: true,
@@ -22,10 +33,6 @@ const studentSchema = new mongoose.Schema({
     birthdate: {
         type: Date,
         required: true,
-    },
-    group: {
-        type: groupSchema,
-        required: true
     },
     CNE: {
         type: String,
@@ -68,14 +75,23 @@ const studentSchema = new mongoose.Schema({
         max: '1024',
         trim: true
     },
+    group: {
+        type: [groupSchema],
+        ref: 'Group'
+    },
     uploads: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'Upload'
     }
 });
 
-export function validateStudent(data) {
+export function validateUser(data) {
     const schema = Joi.object({
+        role: Joi.string()
+            .allow('Admin', 'Professor', 'Student')
+            .min(5)
+            .max(20)
+            .required(),
         CNE: Joi.string()
             .alphanum()
             .min(5)
@@ -118,11 +134,11 @@ export function validateStudent(data) {
             .max(10)
             .trim(),
         absenceAVG: Joi.number(),
-        group: ValidateGroupSchema
+        group: Joi.array().items(ValidateGroupSchema).min(1).max(8)
     });
 
     return schema.validate(data);
 }
 
-const Student = mongoose.model('Student', studentSchema);
-export default Student
+const User = mongoose.model('User', userSchema);
+export default User

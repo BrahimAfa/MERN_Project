@@ -19,8 +19,6 @@ group.route('/').post(async (req, res) => {
         res.status(200).json(result);
 });
 
-
-
 group.route('/:id').delete(async (req, res) => {
         const id = req.params.id;
         if (!id) return res.status(400).json('Sended Values Is Not correct...');
