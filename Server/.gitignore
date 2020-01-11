@@ -3,8 +3,6 @@ node_modules/
 #for vscode Folder
 .vscode/
 #for shell used to export enviroment Variables
-.bashrc
-.bat
 .env
 dist/
 Uploads/

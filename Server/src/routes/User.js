@@ -33,7 +33,7 @@ user.route('/:id').get(passportAuth, async (req, res) => {
 
 });
 
-user.route('/add').post(passportAuth, async (req, res) => {
+user.route('/add').post( async (req, res) => {
     // { firstName, lastName, Matricul, email, birthdate, group, password }
     debuger("hello from post ^^");
     const { error } = validateUser(req.body);
