@@ -6,5 +6,7 @@ node_modules/
 .env
 dist/
 Uploads/
+.bat
+.bashrc
 #src/logs/morgan-logs.log
 src/logs/
