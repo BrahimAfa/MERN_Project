@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 import { groupSchema, ValidateGroupSchema } from './Group.module';
 import Joi from '@hapi/joi';
-
 const userSchema = new mongoose.Schema({
 
     role: {
@@ -139,6 +138,5 @@ export function validateUser(data) {
 
     return schema.validate(data);
 }
-
 const User = mongoose.model('User', userSchema);
 export default User

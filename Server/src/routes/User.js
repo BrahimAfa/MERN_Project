@@ -3,7 +3,7 @@ const user = express.Router();
 import debug from 'debug';
 const debuger = debug("app:User");
 import User, { validateUser } from '../models/User.module';
-import { HashPassword } from '../utils/crypt'
+import { HashPassword, ComparePassword } from '../utils/crypt'
 import passportAuth, { IsAdmin } from '../middlewares/auth';
 const UserNotFoundMessage = { message: "User not found", ok: 0 };
 
@@ -33,10 +33,13 @@ user.route('/:id').get(passportAuth, async (req, res) => {
 
 });
 
-user.route('/add').post( async (req, res) => {
+user.route('/add').post(passportAuth, async (req, res) => {
     // { firstName, lastName, Matricul, email, birthdate, group, password }
     debuger("hello from post ^^");
+
     const { error } = validateUser(req.body);
+    console.log("validation", error);
+
     if (error) return res.status(400).json({ ok: 0, message: error.details[0].message });
     // debuger("value hello");
     const { password } = req.body;
@@ -59,12 +62,23 @@ user.route('/:id').put(passportAuth, IsAdmin, async (req, res) => {
     // const { firstName, lastName, Matricul, email, birthdate, group, password } = req.body;
     const id = req.params.id;
     debuger("User ==>", req.user);
+    const { password } = req.body;
+    const oldUser = await User.findOne({ _id: id });
+    const isMatch = await ComparePassword(password, oldUser.password);
+    if (isMatch) {
+        const { password, ...body } = req.body;
+        req.body = body;
+        const result = await User.findByIdAndUpdate(id, {
+            $set: req.body
+        }, { new: true, useFindAndModify: false });
+        if (!result) return res.status(404).json(UserNotFoundMessage);
+        return res.status(200).json({ result, ok: 1 });
+    }
+    req.body.password = await HashPassword(password);
     const result = await User.findByIdAndUpdate(id, {
         $set: req.body
     }, { new: true, useFindAndModify: false });
-
     if (!result) return res.status(404).json(UserNotFoundMessage);
-
     res.status(200).json({ result, ok: 1 });
 });
 
