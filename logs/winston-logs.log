@@ -42,3 +42,39 @@
         [Symbol(mongoErrorContextSymbol)]: {} } },
   level: 'error',
   timestamp: '2020-01-09 12:28:47' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { SyntaxError: Unexpected string in JSON at position 36
+          at JSON.parse (<anonymous>)
+          at parse (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\body-parser\lib\types\json.js:89:19)
+          at C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\body-parser\lib\read.js:121:18
+          at invokeCallback (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\raw-body\index.js:224:16)
+          at done (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\raw-body\index.js:213:7)
+          at IncomingMessage.onEnd (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\raw-body\index.js:273:7)
+          at IncomingMessage.emit (events.js:203:15)
+          at IncomingMessage.EventEmitter.emit (domain.js:448:20)
+          at endReadableNT (_stream_readable.js:1145:12)
+          at process._tickCallback (internal/process/next_tick.js:63:19)
+        expose: true,
+        statusCode: 400,
+        status: 400,
+        body:
+         '\r\n    {\r\n    \t"role" : "s"\r\n        "firstName": "Brahim",\r\n        "lastName": "Afassy",\r\n        "email": "c@c.com",\r\n        "CNE": "JC563288",\r\n        "tele": "088763652",\r\n        "gender": "Male",\r\n        "CNI": "D1325152",\r\n        "birthdate": "1999-02-14T00:00:00.000Z",\r\n        "group": {\r\n            "code": "ISIL",\r\n            "name":"I...S...I...L..."\r\n        },\r\n        "password": "123ABCabc",\r\n        "absenceAVG": 10\r\n    }',
+        type: 'entity.parse.failed' } },
+  level: 'error',
+  timestamp: '2020-01-11 04:06:19' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      ReferenceError: prof is not defined
+          at _callee2$ (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\src\routes/User.js:18:38)
+          at tryCatch (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\regenerator-runtime\runtime.js:45:40)
+          at Generator.invoke [as _invoke] (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\regenerator-runtime\runtime.js:271:22)
+          at Generator.prototype.(anonymous function) [as next] (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\regenerator-runtime\runtime.js:97:21)
+          at tryCatch (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\regenerator-runtime\runtime.js:45:40)
+          at invoke (C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\regenerator-runtime\runtime.js:135:20)
+          at C:\Users\brahi\Desktop\MERN\MERN_Project\Server\node_modules\regenerator-runtime\runtime.js:145:13
+          at process._tickCallback (internal/process/next_tick.js:68:7) },
+  level: 'error',
+  timestamp: '2020-01-11 04:27:35' }

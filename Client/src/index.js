@@ -6,15 +6,10 @@ import Routes from '../src/routes';
 // import Header from './Components/wedgets/Header';
 import './index.css';
 
-
-export const App = () => {
+const App = () => {
 
     return (
         <BrowserRouter>
-            {/* <div class="row">
-                <div class="col-sm-2"><NavBar /></div>
-                <div class="col-sm-10"><Header /></div>
-            </div> */}
             <Routes />
         </BrowserRouter>
     )

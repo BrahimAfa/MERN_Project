@@ -19,7 +19,7 @@ import addRequestId from 'express-request-id';
 import errorHandling from './middlewares/errors';
 import login from "./routes/Login";
 import passport from "passport";
-import { UserStrategy } from "./Config/auth.config";
+import { strategy } from "./Config/auth.config";
 import { makeDir } from './utils/helper'
 import Upload from "./routes/uploads";
 import cors from 'cors'
@@ -30,7 +30,7 @@ makeDir(__dirname, "/Uploads/Users");
 makeDir(__dirname, "/Uploads/Professor");
 console.log(__filename);
 
-passport.use(UserStrategy);
+passport.use(strategy);
 app.use(passport.initialize())
 app.use(morganMiddleware);
 app.use(addRequestId());

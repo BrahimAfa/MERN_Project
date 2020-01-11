@@ -8,14 +8,17 @@ import passportAuth, { IsAdmin } from '../middlewares/auth';
 const UserNotFoundMessage = { message: "User not found", ok: 0 };
 
 user.route('/').get(passportAuth, async (req, res) => {
-    const users = await User.find().select("-group.modules -");
+    const { role } = req.body;
+    const users = await User.find().select("-group.modules -uploads");
+    //this is bad filtring after gittent the data in database (Imagine 10,000 users§!!!!????)
+    if (role) return res.status(200).json(users.filter(r => r.role === role));
     res.status(200).json(users);
 });
 
 user.route('/:id').get(passportAuth, async (req, res) => {
 
     const user = await User.findOne({ _id: req.params.id });
-    if (!prof) return res.status(400).json(UserNotFoundMessage);
+    if (!user) return res.status(400).json(UserNotFoundMessage);
     res.status(200).json(user);
 
 });

@@ -27,4 +27,4 @@ const validateCallback = async (payload, done) => {
 
 }
 
-export const Strategy = new Strategy(opts, validateCallback);
+export const strategy = new Strategy(opts, validateCallback);

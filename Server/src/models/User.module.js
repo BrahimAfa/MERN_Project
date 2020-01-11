@@ -88,7 +88,7 @@ const userSchema = new mongoose.Schema({
 export function validateUser(data) {
     const schema = Joi.object({
         role: Joi.string()
-            .allow('Admin', 'Professor', 'Student')
+            .valid('Admin', 'Professor', 'Student')
             .min(5)
             .max(20)
             .required(),

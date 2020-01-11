@@ -3,6 +3,8 @@ import './loginForm.css';
 import { BrowserRouter, Redirect } from 'react-router-dom';
 import Loading from '../../pages/loading/loading'
 import axios from 'axios'
+import { loginUser } from '../../../Api/User.api';
+import { login } from '../../../utils/loginHelper';
 
 class LoginForm extends Component {
     state = {
@@ -49,64 +51,33 @@ class LoginForm extends Component {
     hundleSubmit = async (e) => {
         console.log("targer =>", this.state.targetUser);
         e.preventDefault()
-        if (this.state.targetUser === "S") {
-            try {
-
-                const result = await axios.post("http://localhost:3030/api/login/Student", { email: this.state.username, password: this.state.password });
-                console.log("result", result);
-                if (result.data.ok === 1) {
-                    localStorage.setItem("token", result.data.token);
-                    localStorage.setItem("role", "student");
-                    this.setState({
-                        rederict: true
-                    });
-                    return;
-                }
-                this.setState({
-                    displayErr: 'block',
-                    errMessage: result.data.message
-                });
-            } catch (err) {
-                console.log("err", err);
-                // if (err.response.status <= 400) {
-                // this.setState({
-                //     displayErr: 'block',
-                //     errMessage: err.response.data.message
-                // });
-                // }
-
-            }
-
-        } else {
-            try {
-
-                const result = await axios.post("http://localhost:3030/api/login/professor", { email: this.state.username, password: this.state.password });
-                //console.log("result", result);
-                if (result.data.ok === 1) {
-                    localStorage.setItem("token", result.data.token);
-                    localStorage.setItem("role", "professor");
-                    this.setState({
-                        rederict: true
-                    });
-                    return;
-                }
-                this.setState({
-                    displayErr: 'block',
-                    errMessage: result.data.message
-                });
-            } catch (err) {
-                console.log("err", err.response);
-                if (err.response.status <= 400) {
-                    this.setState({
-                        displayErr: 'block',
-                        errMessage: err.response.data.message
-                    });
-                }
-
-            }
+        const result = await loginUser(this.state.username, this.state.password);
+        if (result.error) {
+            console.log(result.error);
+            this.setState({
+                displayErr: 'block',
+                errMessage: result.error.message
+            });
+            return;
         }
+        console.log("result", result);
+        if (result.data.ok === 1) {
+            login(result.data.token);
+            this.setState({ rederict: true });
+            return;
+        }
+        this.setState({
+            displayErr: 'block',
+            errMessage: result.data.message
+        });
+
+        // if (err.response.status <= 400) {
+
+        // }
+
 
     }
+
     //show email input to recive new password
     hundleForget = (e) => {
         this.setState({

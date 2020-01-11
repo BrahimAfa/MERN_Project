@@ -4,6 +4,8 @@ import Header from '../wedgets/Header';
 import './css/students.css'
 import Data from './Data.json';
 import Axios from 'axios';
+import { getUsers } from '../../Api/User.api';
+import { dateFormater } from '../../utils/helpers';
 
 
 export default class students extends Component {
@@ -24,19 +26,14 @@ export default class students extends Component {
     }
 
     //get data and send 24 a limite of rows/items
+    onDeleteClick(e){
+        
+    }
     async componentDidMount() {
-        try {
-            const result = await Axios.get("http://localhost:3030/api/student", {
-                headers: { "Authorization": localStorage.getItem("token") }
-            });
-            this.setState({ Students: result.data, loading: false });
-        } catch (err) {
-            console.log(err);
-            console.log(err.response.data);
-            this.setState({ loadingMsg: err.response.data })
+        const { data, error } = await getUsers();
+        if (error) return this.setState({ loadingMsg: error.message });
 
-        }
-
+        return this.setState({ Students: data, loading: false });
     }
     studentsList = () => {
         let key = 0
@@ -51,7 +48,7 @@ export default class students extends Component {
                     <td>{item.CNE}</td>
                     <td>{item.CNI}</td>
                     <td>{item.group.code}</td>
-                    <td>{new Date(item.birthdate).toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</td>
+                    <td>{dateFormater(item.birthdate)}</td>
                     <td>{item.tele}</td>
                     <td>{item.email}</td>
                     <td>{item.absenceAVG}</td>
@@ -88,14 +85,15 @@ export default class students extends Component {
                             <th scope="col">Mobile No</th>
                             <th scope="col">Email</th>
                             <th scope="col">Absence</th>
+                            <th scope="col">Action</th>
+
                         </tr>
                     </thead>
                     <tbody>
                         {students}
                     </tbody>
                 </table>
-                {/* Modale Show Data */}
-
+                {/* Modal delete */}
                 <div class="modal fade" id="MdalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -110,12 +108,13 @@ export default class students extends Component {
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-danger">Save</button>
+                                <button type="button" class="btn btn-danger" onClick = {this.onDeleteClick}>Save</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* Modal delete */}
+                {/* Modale Show Data */}
+
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
