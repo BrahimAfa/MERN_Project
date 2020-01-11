@@ -1,6 +1,6 @@
 import oracledb from 'oracledb';
 import config from 'config';
-import { POOLMAX, POOLMIN } from '../utils/Constants';
+import { POOLMAX, POOLMIN } from '../../utils/Constants';
 //(poolmin,poolmax ) This will create a pool with a fixed size that requires fewer 
 //resources to manage – a good idea for pools that get consistent usage.
 //after that i should resze UV_THREADPOOL_SIZE befor the call that uses the thread Pool

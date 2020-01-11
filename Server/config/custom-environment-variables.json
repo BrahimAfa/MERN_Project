@@ -1,0 +1,10 @@
+{
+    "dbConfig": {
+        "DB_User": "EU_DB_USER",
+        "DB_Password": "EU_DB_PASSWORD",
+        "DB_Connection": "EU_DB_CONNECTION"
+    },
+    "jwtConfig": {
+        "JWT_Private_Key": "JWT_KEY"
+    }
+}

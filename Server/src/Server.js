@@ -4,10 +4,10 @@ import "regenerator-runtime/runtime";
 import 'express-async-errors';
 import './Config/database.Config';
 //changing the default path for "config library" from "/config" to "/env"
-// console.log(path.join(__dirname, 'env'));
-// import path from 'path';
-// //`${__dirname}\\src\\env`s
-// process.env.NODE_CONFIG_DIR  = path.join(__dirname, 'env');
+//import path from 'path';
+//   console.log(path.join(__dirname, 'env'));
+//console.log(`${__dirname}\\src\\env`);  
+// process.env.NODE_CONFIG_DIR = path.join(__dirname, 'env');
 import express from "express";
 //const dbConfig = require('./config/database.js');
 import { Startup } from './Config/Server.Config';

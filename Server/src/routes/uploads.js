@@ -2,7 +2,7 @@ import express from 'express';
 const upload = express.Router();
 import debug from 'debug';
 const debuger = debug("app:Uploads");
-import multerUpload from '../config/uploads.Config'
+import multerUpload from '../Config/uploads.Config'
 import passportAuth, { IsAdmin } from '../middlewares/auth';
 import Upload from '../models/Uploads.module';
 import User from '../models/User.module';

@@ -4,7 +4,7 @@
         "DB_Password": "",
         "DB_Connection": ""
     },
-    "LoginConfig": {
+    "LoginConfig":{
         "JWT_Private_Key": ""
     }
 }
