@@ -18,12 +18,13 @@ class LoginForm extends Component {
         username: '',
         password: '',
         title: 'Welcome',
-        targetUser: ''
+        targetUser: '',
+        id: ""
     }
     //rederict to dashboard
     renderRedirect = () => {
         if (this.state.rederict) {
-            return <Redirect to='/redirect' />
+            return <Redirect to={'/redirect/' + this.state.id} />
         }
     }
     //get input changes --value--
@@ -62,7 +63,7 @@ class LoginForm extends Component {
         }
         console.log("result", result);
         if (result.data.ok === 1) {
-            login(result.data.token);
+            login(result.data);
             this.setState({ rederict: true });
             return;
         }

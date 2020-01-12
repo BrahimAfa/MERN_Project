@@ -1,39 +1,48 @@
-.nav{
-    font-size:13px;
+.nav {
+    font-size: 13px;
     background-color: #042954;
 }
 
-.nav-item >span, .sub-item{
+.nav-item>span,
+.sub-item {
     color: #fff;
 }
 
-.nav-head{
+.nav-head {
     border: 1px solid;
     text-align: center;
     background-color: #FDC500;
     height: 46px;
 }
 
-.sub-nav{
-    background-color:#051F3E;
+.tab-header {
+    text-align: center;
+}
+
+.sub-nav {
+    background-color: #051F3E;
     padding: 4px;
     margin-left: -19px;
 }
 
-.sub-item{
+.sub-item {
     font-size: 12px;
     padding: 4px;
 }
 
-.fa-chevron-right,.fa-chevron-down{
+.fa-chevron-right,
+.fa-chevron-down {
     float: right;
-    font-size: 11px;;
+    font-size: 11px;
+    ;
 }
-.fa-angle-right{
+
+.fa-angle-right {
     margin-right: 3px;
     margin-left: -3px;
     font-size: 10px;
 }
-.ico{
+
+.ico {
     margin-right: 14px;
 }

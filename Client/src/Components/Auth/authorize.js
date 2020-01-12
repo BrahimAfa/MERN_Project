@@ -1,11 +1,11 @@
 import React, { Component, } from 'react'
 import { Redirect } from 'react-router-dom'
-import { isInRole } from '../../utils/loginHelper';
+import { isInRole, getROLE } from '../../utils/loginHelper';
 class Authorize extends Component {
     state = {
         isAuthorized: false
     }
-    isAuth = (role) => true;
+    isAuth = (role) => role.toLowerCase().split(" ").includes(getROLE().toLowerCase());
 
     render() {
         return (

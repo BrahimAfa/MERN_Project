@@ -6,12 +6,14 @@ import Data from './Data.json';
 import Axios from 'axios';
 import { getUsers, deleteUser } from '../../Api/User.api';
 import { dateFormater } from '../../utils/helpers';
+import { Link } from 'react-router-dom';
 
 export default class students extends Component {
     state = {
 
         loadingMsg: "Loading...!!",
         Students: [],
+        OriginalStudents: [],
         loading: true,
         user: { group: [{}] }
     }
@@ -24,12 +26,12 @@ export default class students extends Component {
 
     }
 
-    async componentDidMount() {
+    async componentWillMount() {
         const { error, data } = await getUsers("Student");
         if (error) return this.setState({ loadingMsg: "Error while Loading Data try again..." });
         console.log(data);
 
-        return this.setState({ Students: data, loading: false });
+        return this.setState({ Students: data, OriginalStudents: data, loading: false });
 
     }
 
@@ -43,17 +45,37 @@ export default class students extends Component {
         // this.setState({ Students: this.state.Students.filter(u => u !== data._id) })
         window.location = '/students'
     }
+
     //edit in element from table
+    hundleFilter = async (e) => {
+        if (e.target.value) {
+            let val = this.state.OriginalStudents.filter(item => item[e.target.name].toLowerCase().search(e.target.value.toLowerCase()) !== -1)
+            this.setState({ Students: val });
+            return;
+        }
+        this.setState({ Students: this.state.OriginalStudents });
+    }
+    hundleFilterGroup = async (e) => {
+        if (e.target.value) {
+            let val = this.state.OriginalStudents.filter(item => item.group[0].code.toLowerCase().search(e.target.value.toLowerCase()) !== -1)
+            this.setState({ Students: val });
+            return;
+        }
+        this.setState({ Students: this.state.OriginalStudents });
+    }
+
+
     hundleEdit = () => {
 
     }
+
     //get signe etudiant details
     hundleDetail = () => {
 
     }
+
     studentsList = () => {
         let key = 0
-
         const students = this.state.Students.map((item) => {
             key++;
             return (
@@ -71,7 +93,7 @@ export default class students extends Component {
                     <td>{item.absenceAVG}</td>
                     <td data-key={item._id}>
                         <i class="fas fa-eye" onClick={this.handleclick} data-toggle="modal" data-target="#exampleModal"></i>
-                        <i class="fas fa-edit" onClick={this.handleclick}></i>
+                        <Link to={`/admit_student/${item._id}`}><i class="fas fa-edit" onClick={this.handleclick}></i></Link>
                         <i class="fas fa-trash-alt" onClick={this.handleclick} data-toggle="modal" data-target="#MdalDel"></i>
                     </td>
                 </tr>
@@ -81,39 +103,40 @@ export default class students extends Component {
         return (
             <div>
                 <table class=" table table-striped">
-                    <div className="tab-header">
+                    <div className="tab-header " style={{textAlign : "center"}}>
                         <span className="tab-header-title">All Students</span>
-                        <input type="text" name="Roll" className="input-text" id="search-input" placeholder="#Roll Type Here..." />
-                        <input type="text" name="Roll" className="input-text" id="section-input" placeholder="type Section.." />
-                        <button className="btn btn-info" id="search-btn">Search</button>
+                    <input type="text" name="CNI" className="input-text" onChange={this.hundleFilter} id="search-input" placeholder="CNI" />
+                    <input type="text" name="CNE" className="input-text" onChange={this.hundleFilter} id="search-input" placeholder="CNE" />
+                    <input type="text" name="lastName" className="input-text" onChange={this.hundleFilter} id="section-input" placeholder="Last Name" />
+                    <input type="text" name="group" className="input-text" onChange={this.hundleFilterGroup} id="section-input" placeholder="group code" />
                     </div>
-                    <thead>
-                    </thead>
-                    <thead>
-                        <tr className="first-col">
-                            <th scope="col" ><input type="checkbox" name="check-all" id="all" /> roll</th>
-                            <th scope="col">Photo</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">CNE</th>
-                            <th scope="col">CNI</th>
-                            <th scope="col">Group</th>
-                            <th scope="col">Date Of Birth</th>
-                            <th scope="col">Mobile No</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Absence</th>
-                            <th scope="col">Action</th>
+                <thead>
+                </thead>
+                <thead>
+                    <tr className="first-col">
+                        <th scope="col" ><input type="checkbox" name="check-all" id="all" /> roll</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">CNE</th>
+                        <th scope="col">CNI</th>
+                        <th scope="col">Group</th>
+                        <th scope="col">Date Of Birth</th>
+                        <th scope="col">Mobile No</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Absence</th>
+                        <th scope="col">Action</th>
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {students}
-                    </tbody>
+                    </tr>
+                </thead>
+                <tbody>
+                    {students}
+                </tbody>
                 </table>
-                {/* Modal delete */}
-                {this.ModalDeleteStudent()}
-                {/* Modale Show Data */}
-                {this.ModalShowDetials()}
+                {/* Modal delete */ }
+        { this.ModalDeleteStudent() }
+        {/* Modale Show Data */ }
+        { this.ModalShowDetials() }
             </div >
         );
     }

@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     /* position: relative; */
     margin-left: -30px;
     height: 46px;
@@ -8,16 +8,16 @@
 
 }
 
-.navbar-brand > img{
+.navbar-brand>img {
     width: 27px;
     position: absolute;
 }
 
-.navbar-brand > p{
+.navbar-brand>p {
     font-size: 16px;
 }
 
-input[type =search]{
+input[type=search] {
     width: 217px;
     border-radius: 28px;
     height: 27px;
@@ -28,16 +28,23 @@ input[type =search]{
     background-color: #F1F2F4;
 
 }
-.fa-search{
+
+.fa-search {
     position: absolute;
     margin-left: 53em;
     font-size: 13px;
 }
-.fa-globe-europe{
+
+.fa-globe-europe {
     position: absolute;
     margin-left: 46em;
 }
-.custom-sel{
+
+.fas {
+    padding-left: 0px;
+}
+
+.custom-sel {
     position: absolute;
     margin-left: 54em;
     background-color: #FFFFFF;
@@ -46,27 +53,33 @@ input[type =search]{
     font-size: 14px;
     width: 56px;
 }
-select{
+
+select {
     -webkit-appearance: none;
 
 }
-.fa-chevron-down{
+
+.fa-chevron-down {
     position: absolute;
     margin-left: 90em;
     font-size: 9px;
 }
 
-.bar-first, .bar-seconde{
+.bar-first,
+.bar-seconde {
     background-color: #F1F2F4;
     width: 2px;
     height: 30px;
     position: absolute;
     margin-left: 53em;
 }
+
 .bar-seconde {
     margin-left: 60em;
 }
-.fa-envelope, .fa-bell{
+
+.fa-envelope,
+.fa-bell {
     position: absolute;
     margin-left: 54em;
     margin-left: 54em;
@@ -74,14 +87,17 @@ select{
     padding: 6px;
     border-radius: 11px;
 }
-.fa-bell{
+
+.fa-bell {
     margin-left: 57em;
 
 }
-.profil-para{
+
+.profil-para {
     cursor: pointer;
 }
-.profil-para > img{
+
+.profil-para>img {
     width: 35px;
     height: 31px;
     position: absolute;
@@ -89,15 +105,18 @@ select{
     bottom: 10px;
 
 }
-.profil-para > #p2{
+
+.profil-para>#p2 {
     font-size: 12px;
     position: absolute;
-    right: 50px;
-    bottom: -5px;
-   
+    right: 25px;
+    bottom: -10px;
+
 }
-.profil-para > #p1{
+
+.profil-para>#p1 {
     font-size: 11px;
+    font-weight: bold;
     position: absolute;
     right: 17px;
     bottom: 9px;

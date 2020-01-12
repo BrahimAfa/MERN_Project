@@ -2,6 +2,7 @@ import React from 'react';
 import './loading.css';
 import { Redirect } from 'react-router-dom'
 import { Component } from 'react'
+import Dashboard from '../Dashboard';
 
 class Loading extends Component {
     state = {
@@ -16,16 +17,17 @@ class Loading extends Component {
         }, 2000);
     }
     render() {
-        if (this.state.redirect) {
-            return <Redirect to='/dashboard' />
-        }
+
         return (
-            <div className="loading-container">
-                <div className="loading">
-                    <span>Loading...</span>
-                </div>
-
-
+            <div>
+                {
+                    this.state.redirect
+                        ? <Redirect to="/dashbord" />
+                        :
+                        <div className="loading-container">
+                            <div className="loading"><span>Loading...</span>    </div>
+                        </div>
+                }
             </div>
 
         )

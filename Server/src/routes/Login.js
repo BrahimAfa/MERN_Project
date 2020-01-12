@@ -24,8 +24,9 @@ login.route('/').post(async (req, res) => {
     };
 
     const token = generateJWTtoken(payload);
+    const name = `${result.firstName} ${result.lastName}`;
     //res.status(200).header("Authorization", token).json({ token, ok: 1 });
-    res.status(200).json({ role: result.role, token, ok: 1 });
+    res.status(200).json({ role: result.role, id: result._id, name, token, ok: 1 });
 });
 
 export default login;

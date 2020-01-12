@@ -16,13 +16,14 @@ const Routes = () => {
         <Switch>
             <PublicRoute restricted={true} path='/' exact component={Home} />
             {/* Private */}
-            <PublicRoute path='/dashbord' exact component={Dashboard} />
-            <PublicRoute path='/redirect' exact component={Loading} />
-            <PublicRoute path='/students' exact component={Students} />
-            <PublicRoute path='/absence' exact component={Attendance} />
-            <PublicRoute path='/admit_student' exact component={AdmitForm} />
-            <PublicRoute path='/student_detail' exact component={StudentDetail} />
-            <PublicRoute path='/account' exact component={Account} />
+            <PrivateRoute path='/dashbord' exact component={Dashboard} />
+            <PrivateRoute path='/redirect' exact component={Loading} />
+            <PrivateRoute path='/students' exact component={Students} />
+            <PrivateRoute path='/absence' exact component={Attendance} />
+            <PrivateRoute path='/admit_student' exact component={AdmitForm} />
+            <PrivateRoute path='/admit_student/:id' exact component={AdmitForm} />
+            <PrivateRoute path='/student_detail' exact component={StudentDetail} />
+            <PrivateRoute path='/account' exact component={Account} />
 
             <Route render={prop => (<h1><u>{window.location.pathname}</u> NOT FOUND</h1>)} />
         </Switch>

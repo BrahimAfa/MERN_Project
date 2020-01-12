@@ -21,7 +21,7 @@ class NavBar extends Component {
                 <div className="nav-head">ESTE</div>
                 <ul class="nav flex-column">
                     {/* AUTHORIZATION FOR PROFESSOR */}
-                    <Authorize role="professor">
+                    <Authorize role="Admin">
                         <li class="nav-item" >
                             <span class="nav-link active" onClick={this.hundleClick}><i className="fas fa-tachometer-alt ico"></i>Dashborad<i className={this.state.chevron}></i></span>
 
@@ -51,7 +51,7 @@ class NavBar extends Component {
                         </li>
                     </Authorize>
                     {/* AUTHORIZATION FOR STUDENT */}
-                    <Authorize role="student">
+                    <Authorize role="Student Professor">
                         <li className="nav-item" >
                             <span className="nav-link" onClick={this.hundleClick}><i className="fas fa-book ico"></i>Library<i className={this.state.chevron}></i></span>
                             <ul className="nav flex-column sub-nav">
