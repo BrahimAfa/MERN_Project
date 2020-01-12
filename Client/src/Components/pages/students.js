@@ -209,12 +209,12 @@ export default class students extends Component {
 
                                         {/* <!--/col--> */}
                                     </div>
-
+    
                                     {/* <!--/row--> */}
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">more...</button>
+                                    <Link  className="btn btn-primary" to={`/student_detail/${this.state.user._id}`}>more...</Link>
                                 </div>
                                 {/* <!--/card-block--> */}
 

@@ -2,16 +2,28 @@ import React, { Component } from 'react'
 import NavBar from '../wedgets/navbar';
 import Header from '../wedgets/Header';
 import './css/studentDetail.css'
+import { getUser } from '../../Api/User.api';
+import { dateFormater } from '../../utils/helpers';
+import { getID } from '../../utils/loginHelper';
 
 class StudentDetail extends Component {
     state = {
-        photo: "https://img.freepik.com/vecteurs-libre/caricature-profil-homme-affaires_18591-58479.jpg?size=338&ext=jpg",
+        user: { group: [{ code: "" }] },
+        id: getID(),
+    }
+    async componentWillMount() {
+        const id = this.props.match.params.id || this.state.id;
+        const { error, data } = await getUser(id);
+        if (error) return alert(error.message);
+        this.setState({
+            user: data
+        });
     }
     containerDetail = () => {
         return (
             <div className="container row ">
                 <div className="vector-profile col-4">
-                    <img src={this.state.photo} alt="" srcset="" />
+                    <img src={this.state.user.pictur} alt="" srcset="" />
                 </div>
                 <div className="list-info col row">
                     <legend className="info-title">About Me</legend>
@@ -32,20 +44,23 @@ class StudentDetail extends Component {
                         <li>Password:</li>
                     </ul>
                     <ul className=" info  info-elements col">
-                        <li>Lane Streetfield</li>
-                        <li>Male</li>
+                        <li>{this.state.user.firstName + " " + this.state.user.lastName}.</li>
+                        <li>{this.state.user.gender}.</li>
                         <li></li>
                         <li></li>
-                        <li>3/9/2019</li>
+                        <li>NAN</li>
                         <li></li>
-                        <li>nswayland0@livejournal.com</li>
-                        <li>5/24/2019</li>
-                        <li>6</li>
-                        <li>C</li>
-                        <li>1</li>
-                        <li>6 Cottonwood Street</li>
-                        <li>+62 963 549 6150</li>
-                        <li></li>
+                        <li>NAN</li>
+                        <li>{dateFormater(this.state.user.birthdate)}.</li>
+                        <li>NAN</li>
+                        <li>{this.state.user.email}.</li>
+                        <li>NAN</li>
+                        <li>{this.state.user.group[0].code}.</li>
+                        <li>LP</li>
+                        <li>{this.state.user.role}.</li>
+                        <li>NAN</li>
+                        <li>{this.state.user.tele}.</li>
+                        <li>************</li>
                     </ul>
                 </div>
                 <div className="icons">
@@ -67,7 +82,7 @@ class StudentDetail extends Component {
                         <span className="mini-nav">Home-Student Detail</span>
                         <div className="container-form">
                             <div className="container-header">
-                                Hicham douch Details
+                                {this.state.user.firstName + " " + this.state.user.lastName} Details
                             </div>
                             {this.containerDetail()}
                         </div>

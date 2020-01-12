@@ -49,9 +49,11 @@ export default class AdmitForm extends Component {
     hundleSubmit = async (e) => {
         e.preventDefault();
         const { componentState, ...newState } = this.state
+        delete newState[""];
         console.log(newState);
 
         if (e.target.name === "ADD") {
+            console.log(newState);
             await postUser(newState);
         }
 
@@ -138,16 +140,21 @@ export default class AdmitForm extends Component {
                         <input onChange={this.hundleChange} name="CNE" value={this.state.CNE} type="text" class="form-control line-1 line-move" id="admission" />
                     </div>
 
+
                 </div>
                 <div class="row row-position">
-                    <div class="col">
-                        <label htmlFor="">E-mail</label>
-                        <input onChange={this.hundleChange} name="email" value={this.state.email} type="email" class="form-control line-1" id="email-input" />
-                    </div>
 
                     <div class="col">
-                        <label htmlFor="" id="upload-title">password</label>
-                        <input onChange={this.hundleChange} name="password" type="password" class="form-control line-1" placeholder={this.state.state === "ADD" ? "Password" : "New Password"} id="upload-fil" />
+                        <label htmlFor="">E-mail</label>
+                        <input onChange={this.hundleChange} name="email" value={this.state.email} type="email" class="form-control line-1 line-move" id="email-input" />
+                    </div>
+                    <div class="col">
+                        <label htmlFor="">password</label>
+                        <input onChange={this.hundleChange} name="password" type="password" class="form-control line-1 line-move" placeholder={this.state.state === "ADD" ? "Password" : "New Password"} />
+                    </div>
+                    <div class="col">
+                        <label htmlFor="upload-file" >Photo</label>
+                        <input name="ImagePicture" type="File" class="form-control line-1 line-move" id="upload-file" />
                     </div>
                 </div>
 

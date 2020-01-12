@@ -332,3 +332,799 @@
          'C:\\Users\\brahi\\Desktop\\MERN\\MERN_Project\\server\\src\\Config\\logs\\morgan-logs.log' } },
   level: 'error',
   timestamp: '2020-01-11 23:11:54' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { CastError: Cast to ObjectId failed for value "1" at path "_id" for model "User"
+          at new CastError (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\error\cast.js:29:11)
+          at ObjectId.cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schema\objectid.js:246:11)
+          at ObjectId.SchemaType.applySetters (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:969:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1383:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1373:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1352:15)
+          at cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\cast.js:315:32)
+          at model.Query.Query.cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:4641:12)
+          at model.Query.Query._castConditions (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:1843:10)
+          at model.Query.<anonymous> (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:2098:8)
+          at model.Query._wrappedThunk [as _findOne] (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+          at process.nextTick (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\kareem\index.js:369:33)
+          at process._tickCallback (internal/process/next_tick.js:61:11)
+        message:
+         'Cast to ObjectId failed for value "1" at path "_id" for model "User"',
+        name: 'CastError',
+        stringValue: '"1"',
+        kind: 'ObjectId',
+        value: '1',
+        path: '_id',
+        reason: undefined,
+        model: Model { User } } },
+  level: 'error',
+  timestamp: '2020-01-12 04:59:50' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { CastError: Cast to ObjectId failed for value "9" at path "_id" for model "User"
+          at new CastError (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\error\cast.js:29:11)
+          at ObjectId.cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schema\objectid.js:246:11)
+          at ObjectId.SchemaType.applySetters (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:969:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1383:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1373:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1352:15)
+          at cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\cast.js:315:32)
+          at model.Query.Query.cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:4641:12)
+          at model.Query.Query._castConditions (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:1843:10)
+          at model.Query.<anonymous> (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:2098:8)
+          at model.Query._wrappedThunk [as _findOne] (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+          at process.nextTick (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\kareem\index.js:369:33)
+          at process._tickCallback (internal/process/next_tick.js:61:11)
+        message:
+         'Cast to ObjectId failed for value "9" at path "_id" for model "User"',
+        name: 'CastError',
+        stringValue: '"9"',
+        kind: 'ObjectId',
+        value: '9',
+        path: '_id',
+        reason: undefined,
+        model: Model { User } } },
+  level: 'error',
+  timestamp: '2020-01-12 05:01:48' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { CastError: Cast to ObjectId failed for value "9" at path "_id" for model "User"
+          at new CastError (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\error\cast.js:29:11)
+          at ObjectId.cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schema\objectid.js:246:11)
+          at ObjectId.SchemaType.applySetters (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:969:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1383:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1373:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1352:15)
+          at cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\cast.js:315:32)
+          at model.Query.Query.cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:4641:12)
+          at model.Query.Query._castConditions (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:1843:10)
+          at model.Query.<anonymous> (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:2098:8)
+          at model.Query._wrappedThunk [as _findOne] (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+          at process.nextTick (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\kareem\index.js:369:33)
+          at process._tickCallback (internal/process/next_tick.js:61:11)
+        message:
+         'Cast to ObjectId failed for value "9" at path "_id" for model "User"',
+        name: 'CastError',
+        stringValue: '"9"',
+        kind: 'ObjectId',
+        value: '9',
+        path: '_id',
+        reason: undefined,
+        model: Model { User } } },
+  level: 'error',
+  timestamp: '2020-01-12 05:02:19' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-00-mlzsk.gcp.mongodb.net cluster0-shard-00-00-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:07:22' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-00-mlzsk.gcp.mongodb.net cluster0-shard-00-00-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:07:29' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:07:49' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:07:52' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:07:57' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:05' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:22' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:24' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-00-mlzsk.gcp.mongodb.net cluster0-shard-00-00-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:28' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:32' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:35' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-00-mlzsk.gcp.mongodb.net cluster0-shard-00-00-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:37' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:39' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:54' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:08:56' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:02' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:04' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:06' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:07' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:09' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-00-mlzsk.gcp.mongodb.net cluster0-shard-00-00-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:14' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:21' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-00-mlzsk.gcp.mongodb.net cluster0-shard-00-00-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:23' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:27' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-00-mlzsk.gcp.mongodb.net cluster0-shard-00-00-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:09:29' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:10:48' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:01' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:03' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:13' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:14' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:18' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:20' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:23' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:25' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-01-mlzsk.gcp.mongodb.net cluster0-shard-00-01-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:27' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:29' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:30' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { MongoTimeoutError: Server selection timed out after 30000 ms
+          at Timeout.setTimeout (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongodb\lib\core\sdam\server_selection.js:308:9)
+          at ontimeout (timers.js:436:11)
+          at tryOnTimeout (timers.js:300:5)
+          at listOnTimeout (timers.js:263:5)
+          at Timer.processTimers (timers.js:223:10)
+        name: 'MongoTimeoutError',
+        reason:
+         { Error: getaddrinfo ENOTFOUND cluster0-shard-00-02-mlzsk.gcp.mongodb.net cluster0-shard-00-02-mlzsk.gcp.mongodb.net:27017
+             at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+           name: 'MongoNetworkError',
+           [Symbol(mongoErrorContextSymbol)]: {} },
+        [Symbol(mongoErrorContextSymbol)]: {} } },
+  level: 'error',
+  timestamp: '2020-01-12 05:11:31' }
+{ message:
+   { Code: 'MiddlewareErrorHandler',
+     error:
+      { CastError: Cast to ObjectId failed for value "9" at path "_id" for model "User"
+          at new CastError (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\error\cast.js:29:11)
+          at ObjectId.cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schema\objectid.js:246:11)
+          at ObjectId.SchemaType.applySetters (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:969:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1383:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1373:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\schematype.js:1352:15)
+          at cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\cast.js:315:32)
+          at model.Query.Query.cast (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:4641:12)
+          at model.Query.Query._castConditions (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:1843:10)
+          at model.Query.<anonymous> (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\query.js:2098:8)
+          at model.Query._wrappedThunk [as _findOne] (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+          at process.nextTick (C:\Users\brahi\Desktop\MERN\MERN_Project\server\node_modules\kareem\index.js:369:33)
+          at process._tickCallback (internal/process/next_tick.js:61:11)
+        message:
+         'Cast to ObjectId failed for value "9" at path "_id" for model "User"',
+        name: 'CastError',
+        stringValue: '"9"',
+        kind: 'ObjectId',
+        value: '9',
+        path: '_id',
+        reason: undefined,
+        model: Model { User } } },
+  level: 'error',
+  timestamp: '2020-01-12 05:12:35' }

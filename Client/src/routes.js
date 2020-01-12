@@ -22,6 +22,7 @@ const Routes = () => {
             <PrivateRoute path='/absence' exact component={Attendance} />
             <PrivateRoute path='/admit_student' exact component={AdmitForm} />
             <PrivateRoute path='/admit_student/:id' exact component={AdmitForm} />
+            <PrivateRoute path='/student_detail/:id' exact component={StudentDetail} />
             <PrivateRoute path='/student_detail' exact component={StudentDetail} />
             <PrivateRoute path='/account' exact component={Account} />
 

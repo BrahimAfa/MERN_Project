@@ -5,6 +5,7 @@ const debuger = debug("app:User");
 import User, { validateUser } from '../models/User.module';
 import { HashPassword, ComparePassword } from '../utils/crypt'
 import passportAuth, { IsAdmin } from '../middlewares/auth';
+import multerUpload from '../config/uploads.Config';
 const UserNotFoundMessage = { message: "User not found", ok: 0 };
 
 // user.route('/').get(passportAuth, async (req, res) => {
@@ -33,15 +34,19 @@ user.route('/:id').get(passportAuth, async (req, res) => {
 
 });
 
-user.route('/add').post(passportAuth, async (req, res) => {
+user.route('/add').post(passportAuth, multerUpload.single("ImagePicture"), async (req, res) => {
     // { firstName, lastName, Matricul, email, birthdate, group, password }
-    debuger("hello from post ^^");
 
+    debuger("hello from post ^^");
     const { error } = validateUser(req.body);
     console.log("validation", error);
 
     if (error) return res.status(400).json({ ok: 0, message: error.details[0].message });
     // debuger("value hello");
+    const imagePath = req.file !== undefined ? req.file.filename : "http://www.ietpune.com/img/teacher-img/user.png";
+    // console.log(imagePath);
+    
+    req.body.pictur = imagePath
     const { password } = req.body;
     req.body.password = await HashPassword(password);
     const user = new User(req.body);
