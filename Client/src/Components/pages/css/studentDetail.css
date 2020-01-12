@@ -1,0 +1,62 @@
+/*google font import*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+.container-form{
+        /* border: 1px solid; */
+        height: 80%;
+        background-color: #ffffff;
+        margin-top: 27px;
+       
+}
+.container-header{
+    border-bottom: 1px solid #F5F5F5;
+    height: 38px;
+    /* margin: 3px; */
+    margin-left: 1px;
+    padding: 8px;
+    font-size: 15px;
+    padding-left: 21px;
+    text-align: justify;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+.vector-profile > img{
+    width: 251px;
+}
+    /* border: 1px solid; */
+
+
+.list-info > .info{
+    font-family: 'Roboto Condensed', sans-serif;
+    list-style: none;
+    opacity: 0.6;
+    font-size: 13px;
+    line-height: 3;
+} 
+.info-elements{
+    opacity: 1 !important;
+
+}
+.icons{
+    position: absolute;
+    right: 4em;
+}
+
+.icons > .fas{
+    /* border: 1px solid; */
+    background-color: #F1F2F4;
+    color: #646464;
+    padding: 4px;
+    font-size: 18px;
+    /* border-spacing: 4px; */
+    margin-right: 11px;
+    width: 26px;
+    text-align: center;
+}
+.info-title{
+    border-bottom: 1px solid;
+    border-width: 3px;
+   
+}
+legend{
+    width: 76%;
+}

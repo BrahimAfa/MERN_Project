@@ -1,0 +1,12 @@
+.container-profil{
+    background-color: #ffffff;
+}
+
+.container-profil > legend{
+    border-bottom: 2px solid #F5F5F5;
+    width: 100%;
+    padding-left: 26px;
+}
+.info-add{
+    line-height: 4 !important;
+}

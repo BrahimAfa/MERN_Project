@@ -34,7 +34,7 @@ class NavBar extends Component {
                             <span className="nav-link" onClick={this.hundleClick}><i className="fas fa-user-graduate ico"></i>Students<i className={this.state.chevron}></i></span>
                             <ul className="nav flex-column sub-nav">
                                 <li className="sub-item ml-5 pt-3"><i className="fas fa-angle-right"></i><Link to='/students'>All Students</Link> </li>
-                                <li className="sub-item ml-5"><i className="fas fa-angle-right"></i>Students Details</li>
+                                <li className="sub-item ml-5"><i className="fas fa-angle-right"></i><Link to='student_detail'>Students Details</Link> </li>
                                 <li className="sub-item ml-5"><i className="fas fa-angle-right"></i> <Link to='/admit_student'>Admit Form</Link></li>
                                 <li className="sub-item ml-5"><i className="fas fa-angle-right"></i>Student Promotion</li>
 
@@ -90,7 +90,7 @@ class NavBar extends Component {
                         <span className="nav-link" ><i className="far fa-envelope ico"></i>Message<i className={this.state.chevron}></i></span>
                     </li>
                     <li className="nav-item">
-                        <span className="nav-link" ><i className="fas fa-cog ico"></i>Account</span>
+                        <span className="nav-link" ><i className="fas fa-cog ico"></i><Link to='/account'>Account</Link> </span>
                     </li>
 
                 </ul>
