@@ -16,7 +16,13 @@ export const getID = () => localStorage.getItem(ID_KEY);
 export const getROLE = () => localStorage.getItem(ROLE_KEY);
 export const getNAME = () => localStorage.getItem(NAME_KEY);
 
-export const logout = () => localStorage.removeItem(TOKEN_KEY);
+export const logout = () => {
+    localStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(ID_KEY);
+    localStorage.removeItem(ROLE_KEY);
+    localStorage.removeItem(NAME_KEY);
+    window.location = '/';
+}
 
 export const isLogin = () => localStorage.getItem(TOKEN_KEY) ? true : false;
 

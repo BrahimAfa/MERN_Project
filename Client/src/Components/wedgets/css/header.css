@@ -121,3 +121,9 @@ select {
     right: 17px;
     bottom: 9px;
 }
+
+.state {
+    position: absolute;
+    top: -25px;
+    border-radius: 20px;
+}

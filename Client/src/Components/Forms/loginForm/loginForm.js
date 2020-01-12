@@ -36,7 +36,7 @@ class LoginForm extends Component {
     }
     //show hide login form
     hundleClick = (e) => {
-        this.setState({ targetUser: e.target.getAttribute("name") });
+        // this.setState({ targetUser: e.target.getAttribute("name") });
         if (this.state.showed) {
             this.setState({
                 showed: false
@@ -50,7 +50,7 @@ class LoginForm extends Component {
 
     //submit form
     hundleSubmit = async (e) => {
-        console.log("targer =>", this.state.targetUser);
+        //console.log("targer =>", this.state.targetUser);
         e.preventDefault()
         const result = await loginUser(this.state.username, this.state.password);
         if (result.error) {
@@ -111,10 +111,7 @@ class LoginForm extends Component {
         return (
             <div>
                 <div>
-                    <div class="show-login-sign">Sign in as : </div>
-                    <br />
-                    <div class="show-login-btn student" name="S" onClick={this.hundleClick}>Student</div>
-                    <div class="show-login-btn professor" name="P" onClick={this.hundleClick}>Professor</div>
+                    <div class="show-login-sign show-login-btn " onClick={this.hundleClick}>Signin</div>
                 </div>
                 <div class={this.state.showed ? "login-box showed" : "login-box"}>
                     <div class="hide-login-btn" onClick={this.hundleClick}><i class="fas fa-times"></i></div>

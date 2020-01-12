@@ -62,14 +62,21 @@
 }
 
 .show-login-btn {
-  position: absolute;
-  top: 70%;
   transform: translate(-50%, -50%);
   color: white;
   border: 2px solid;
   padding: 10px;
   cursor: pointer;
 
+}
+
+.show-login-btn:hover {
+  background-color:rgba(214, 213, 213, 0.363);
+  transition: all ease-in 300ms;
+}
+.show-login-btn:hover {
+  background-color:rgba(214, 213, 213, 0.363);
+  transition: all ease-in 300ms;
 }
 
 .show-login-sign {

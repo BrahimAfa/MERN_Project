@@ -1,6 +1,6 @@
 import React from 'react'
 import './css/header.css';
-import { getNAME, getROLE } from '../../utils/loginHelper';
+import { getNAME, getROLE, logout } from '../../utils/loginHelper';
 
 
 const Header = () => {
@@ -18,12 +18,15 @@ const Header = () => {
                     <option selected>English</option>
                     <option value="1">French</option>
                 </select>
-                <span className="bar-first"></span>
+                <span className="bar-first">
+                    <button className="btn btn-danger state" onClick={() => logout()}>Logout</button>
+
+                </span>
                 <span className="bar-seconde"></span>
                 <span className="profil-para">
                     <img src="https://www.viandedeliege.com/wp-content/uploads/2018/06/personnel.png" alt="" srcset="" />
                     <p id="p1">{getNAME()}</p>
-                    <p id="p2" class="badge badge-danger tags">{getROLE()}</p>
+                    <p id="p2" class="badge badge-info tags">{getROLE()}</p>
                 </span>
 
             </nav>
