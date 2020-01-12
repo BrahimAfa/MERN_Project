@@ -2,8 +2,9 @@
     /* position: relative; */
     margin-left: -30px;
     height: 46px;
-    width: 65.19em;
+    width: 100%;
     background-color: #FFFFFF !important;
+
 
 }
 
@@ -43,6 +44,7 @@ input[type =search]{
     /* border: 1px solid; */
     border: 1px solid #FFFFFF;
     font-size: 14px;
+    width: 56px;
 }
 select{
     -webkit-appearance: none;
@@ -75,4 +77,28 @@ select{
 .fa-bell{
     margin-left: 57em;
 
+}
+.profil-para{
+    cursor: pointer;
+}
+.profil-para > img{
+    width: 35px;
+    height: 31px;
+    position: absolute;
+    right: 91px;
+    bottom: 10px;
+
+}
+.profil-para > #p2{
+    font-size: 12px;
+    position: absolute;
+    right: 50px;
+    bottom: -5px;
+   
+}
+.profil-para > #p1{
+    font-size: 11px;
+    position: absolute;
+    right: 17px;
+    bottom: 9px;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './css/header.css';
 
+
 const Header = () => {
     return (
         <div>
@@ -20,6 +21,11 @@ const Header = () => {
                 <i class="far fa-envelope"></i>
                 <i class="far fa-bell"></i>
                 <span className="bar-seconde"></span>
+                <span className="profil-para">
+                    <img src="https://www.viandedeliege.com/wp-content/uploads/2018/06/personnel.png" alt="" srcset="" />
+                    <p id="p1">Hicham Douch</p>
+                    <p id="p2">Admin</p>
+                </span>
 
             </nav>
         </div >
