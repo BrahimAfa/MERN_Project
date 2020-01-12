@@ -3,18 +3,14 @@ import "regenerator-runtime/runtime";
 //this is the one that allows me to remove trycatch  from routes
 import 'express-async-errors';
 import './Config/database.Config';
-//changing the default path for "config library" from "/config" to "/env"
-//import path from 'path';
-//   console.log(path.join(__dirname, 'env'));
-//console.log(`${__dirname}\\src\\env`);  
-// process.env.NODE_CONFIG_DIR = path.join(__dirname, 'env');
+
 import express from "express";
-//const dbConfig = require('./config/database.js');
 import { Startup } from './Config/Server.Config';
 import group from './routes/Group';
 import User from './routes/User';
 import { morganMiddleware } from './Config/morgan.Config';
-//Request log and its associated Response log would have the same id
+
+//Request log and its associated Response  will have the same id
 import addRequestId from 'express-request-id';
 import errorHandling from './middlewares/errors';
 import login from "./routes/Login";
@@ -24,8 +20,6 @@ import { makeDir } from './utils/helper'
 import Upload from "./routes/uploads";
 import cors from 'cors'
 const app = express();
-//WinstonLogger();
-//make uploads Dirictory
 makeDir(__dirname, "/Uploads/Users");
 makeDir(__dirname, "/Uploads/Professor");
 console.log(__filename);
