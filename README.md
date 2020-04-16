@@ -1,17 +1,6 @@
 # MERN Project (EU APP-Essaouira university )
 
 =============>Importatnt Infomration<============
-	to login as an ADMIN on react : 
-		##username:c@c.com
-		##password:123ABCabc
-
-	to login as a Student on react : 
-		##username:m@m.com
-		##password:123ABCabc
-		==================
-	mongodb Atlas Access:
-		username:brahimafassy@gmail.com
-		password:070512Afa
 		==================
 export variable environment (source .bashrc) for database and athentication to work
 		==================
